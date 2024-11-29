@@ -3,10 +3,10 @@ import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react';
-import About from './components/About'
+// import About from './components/About'
 
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -80,9 +80,31 @@ function App() {
   }
 
   return (
-    <Router>
-      {/* Navbar and Alert are placed outside Routes */}
-      <Navbar
+    // <Router>
+    //   {/* Navbar and Alert are placed outside Routes */}
+    //   <Navbar
+    //     title="TextUtils"
+    //     mode={mode}
+    //     toggleMode={toggleMode}
+    //     orangeMode={orangeMode}
+    //     greenMode={greenMode}
+    //     yellowMode={yellowMode}
+    //   />
+    //   <Alert alert={alert} />
+
+    //   <div className="container my-3">
+    //     <Routes>
+    //       {/* Use element prop for Route components */}
+    //       <Route path="/about" element={<About mode={mode}  />} />
+    //       <Route
+    //         path="/"
+    //         element={<TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />}
+    //       />
+    //     </Routes>
+    //   </div>
+    // </Router>
+    <>
+    <Navbar
         title="TextUtils"
         mode={mode}
         toggleMode={toggleMode}
@@ -92,17 +114,8 @@ function App() {
       />
       <Alert alert={alert} />
 
-      <div className="container my-3">
-        <Routes>
-          {/* Use element prop for Route components */}
-          <Route path="/about" element={<About mode={mode}  />} />
-          <Route
-            path="/"
-            element={<TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />}
-          />
-        </Routes>
-      </div>
-    </Router>
+      <TextForm showAlert={showAlert} heading="Try TextUtils - word counter, character counter, remove extra spaces" mode={mode} />
+    </>
   );
 }
 

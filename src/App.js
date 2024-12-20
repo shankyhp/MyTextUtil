@@ -2,6 +2,7 @@
 import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
+
 import React, { useState } from 'react';
 // import About from './components/About'
 
@@ -37,47 +38,7 @@ function App() {
     }
   }
 
-  const orangeMode = () => {
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#8B4000';
-      showAlert(" Dark mode enabled", "success")
-    }
-    else {
-      setMode('light');
-      document.body.style.backgroundColor = 'white';
-      showAlert(" Light mode enabled", "success")
 
-    }
-  }
-
-  const greenMode = () => {
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#05472A';
-      showAlert(" Dark mode enabled", "success")
-    }
-    else {
-      setMode('light');
-      document.body.style.backgroundColor = 'white';
-      showAlert(" Light mode enabled", "success")
-
-    }
-  }
-
-  const yellowMode = () => {
-    if (mode === 'light') {
-      setMode('dark');
-      document.body.style.backgroundColor = '#8B8000';
-      showAlert(" Dark mode enabled", "success")
-    }
-    else {
-      setMode('light');
-      document.body.style.backgroundColor = 'white';
-      showAlert(" Light mode enabled", "success")
-
-    }
-  }
 
   return (
     // <Router>
@@ -104,13 +65,11 @@ function App() {
     //   </div>
     // </Router>
     <>
-    <Navbar
+      <Navbar
         title="TextUtils"
         mode={mode}
         toggleMode={toggleMode}
-        orangeMode={orangeMode}
-        greenMode={greenMode}
-        yellowMode={yellowMode}
+
       />
       <Alert alert={alert} />
 
